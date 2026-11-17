@@ -4,8 +4,8 @@ window.DIARY_DATA = {
   "site": {
     "title": "Entre linhas, Rayssa.",
     "recipient": "Rayssa Vieira",
-    "author": "De mim, com carinho",
-    "subtitle": "Rayssa, este é o meu jeito de guardar a nossa história. Desde a primeira conversa, um detalhe de cada vez.",
+    "author": "Com carinho, Ítalo",
+    "subtitle": "Rayssa, esse é um presentinho do seu garoto de programa. Fiz o site e já aceitei o contrato de manutenção vitalícia KKKKK. Vou atualizar sempre que tiver um recado pra você ou uma lembrança nossa que eu quiser guardar aqui. Com carinho, Ítalo.",
     "startDate": "2026-11-09"
   },
   "longing": {
