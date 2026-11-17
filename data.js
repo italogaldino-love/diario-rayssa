@@ -92,5 +92,31 @@ window.DIARY_DATA = {
       "url": "",
       "title": ""
     }
-  }
+  },
+  "calendarNotes": [
+    {
+      "id": "recado-2026-11-09",
+      "date": "2026-11-09",
+      "title": "O começo de alguma coisa",
+      "content": "Hoje começamos uma das melhores conversas que tive nos últimos tempos. Já deu pra perceber que temos bastante coisa em comum. Ainda é cedo pra dizer que gosto de você, Rayssa, mas desconfio que esse possa ser o começo da minha paixão.\n\nMarcamos a nossa primeira saidinha e eu já comprei presentes pra você. Como se isso não bastasse, comprei uma blusa e um tênis pra usar no nosso encontro. Que loucura. Mal posso esperar pra te encontrar.\n\nE olha: se um dia der B.O., eu tenho provas de que você me deixou ser emocionado, viu? KKKKKKKK"
+    },
+    {
+      "id": "recado-2026-11-10",
+      "date": "2026-11-10",
+      "title": "Pode somar mais paixão",
+      "content": "Hoje o dia começou de um jeito ótimo: troquei meu plantão pra gente conseguir sair. Conversamos bastante, e minha ansiedade só aumenta querendo que quinta-feira chegue logo.\n\nTambém comecei a entender melhor a sua rotina. É bem puxada, viu? No meio dessa correria toda, nossa conversa rendeu bastante.\n\nPode adicionar mais paixão nessa contagem KKKKK. Parece que eu tô me envolvendo rápido demais, mas, pra ser sincero, tô achando ótimo."
+    },
+    {
+      "id": "recado-2026-11-11",
+      "date": "2026-11-11",
+      "title": "Mais dez mil pontos pra você",
+      "content": "Hoje eu ganhei um lanche de graça, viu? KKKKK. Também tô testando meu tênis novo e acabei de pegar a camisa pro nosso encontro. Já tá quase tudo pronto; só falta a ansiedade colaborar.\n\nE ainda veio uma grande surpresa: você não é petista KKKKKKKK. Achei o máximo. Mais dez mil pontos pra você.\n\nAcho que vou morrer de ansiedade antes de esse encontro chegar."
+    },
+    {
+      "id": "recado-2026-11-12",
+      "date": "2026-11-12",
+      "title": "Foi simplesmente perfeito",
+      "content": "Hoje eu acordei com você no pensamento. Parece coisa de adolescente falar assim, mas no puedo negar os fatos KKKKK.\n\nO dia correu muito bem, mas o melhor ficou pro nosso encontro. Depois de tanta expectativa, de contar os dias e de quase morrer de ansiedade, finalmente aconteceu.\n\nE foi simplesmente PERFEITO."
+    }
+  ]
 };

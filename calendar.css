@@ -14,3 +14,11 @@
 .calendar-reading h3{font-size:26px;line-height:1.35}.calendar-reading h4{font-family:var(--serif);font-weight:400;font-size:24px;color:var(--rose);margin:24px 0 12px}
 .calendar-content{white-space:pre-wrap;overflow-wrap:anywhere;font-size:15px;line-height:1.9}.calendar-empty{color:#b5bbae;margin-top:25px}.calendar-reading article+article{border-top:1px solid #39473e;margin-top:28px}
 @media(max-width:720px){.calendar-layout{grid-template-columns:1fr;gap:16px}.calendar-panel,.calendar-reading{padding:20px}.calendar-day{min-height:46px}.calendar-toolbar h3{font-size:22px}}
+
+.our-photos-empty{padding:55px 25px;text-align:center;border:1px dashed #536258;border-radius:12px;background:#18251f}
+.our-photos-empty>span{font-size:42px;color:var(--rose)}
+.our-photos-empty h3{font-size:30px;margin:14px 0}
+.our-photos-empty p{color:#b5bbae;line-height:1.9}
+.our-photos-empty small{font-size:9px;letter-spacing:2px;color:#b5bbae}
+.header nav{flex-wrap:wrap;justify-content:center;row-gap:12px}
+@media(max-width:600px){.our-photos-empty{padding:35px 20px}.our-photos-empty h3{font-size:25px}}
