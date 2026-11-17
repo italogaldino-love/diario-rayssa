@@ -22,3 +22,5 @@
 .our-photos-empty small{font-size:9px;letter-spacing:2px;color:#b5bbae}
 .header nav{flex-wrap:wrap;justify-content:center;row-gap:12px}
 @media(max-width:600px){.our-photos-empty{padding:35px 20px}.our-photos-empty h3{font-size:25px}}
+
+.closing .closing-portrait{display:block;width:90px;height:110px;object-fit:cover;object-position:center 47%;margin:0 auto 18px;border-radius:45px 45px 8px 8px;opacity:.7;filter:saturate(.75);border:1px solid var(--line)}
