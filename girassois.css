@@ -6,3 +6,13 @@ body{background-color:var(--paper);background-image:repeating-linear-gradient(11
 .entry,.notice,.longing-meter,.love-card,.calendar-panel,.calendar-reading,.editor-section,.our-photos-empty{border-top-color:#82724d;background-image:linear-gradient(117deg,#577ba115,transparent 48%,#ba933a0c)}
 .chapter-divider,.footer,.calendar-toolbar{border-color:#665c42}.calendar-day[aria-pressed=true]{background:#3a5669}.calendar-day[aria-current]{border-color:#cba957}
 .header nav a:after{background:#d8b251}.header .brand img{filter:sepia(.5) saturate(1.4)}.calendar-dot,.calendar-legend i{background:#ff595f}
+
+.hero .calendar-cta {background:#e9bd62;color:#212622;border-color:#e9bd62}
+.hero .calendar-cta:hover {background:#f5cf80}
+.diary-guide {max-width:410px;margin-top:16px;font-size:14px;color:var(--ink)}
+.diary-guide summary {cursor:pointer;width:fit-content;text-decoration:underline;text-underline-offset:4px}
+.diary-guide ol {padding:16px 22px 16px 38px;background:#202a30;border-left:2px solid #bb944b}
+.diary-guide li+li {margin-top:10px}
+.diary-guide a {color:#f0c56d}
+#calendario {border-top:2px solid #c99e4e;scroll-margin-top:18px}
+#calendario .calendar-panel {border-color:#9c804b;box-shadow:0 8px 32px #10141b66}

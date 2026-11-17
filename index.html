@@ -23,7 +23,7 @@
   <div class="draft-ribbon" id="draft-ribbon" hidden>Prévia do seu rascunho neste navegador. <a href="index.html">Ver versão publicada</a></div>
   <header class="header wrap">
     <a class="brand" href="#inicio" aria-label="Página inicial"><img src="assets/flor.svg" width="38" height="42" alt=""><span><strong id="brand-title">Entre linhas, você.</strong><small>UM DIÁRIO, MUITO CARINHO.</small></span></a>
-    <nav aria-label="Navegação principal"><a href="#apaixonado">Tempo apaixonado</a><a href="#calendario">Calendário</a><a href="#fotos-nossas">Fotos nossas</a><a href="#diario">O diário</a><a href="#historia">Nossa história</a><a href="#saudade">A saudade</a></nav>
+    <nav aria-label="Navegação principal"><a href="#calendario">Calendário</a><a href="#apaixonado">Tempo apaixonado</a><a href="#fotos-nossas">Fotos nossas</a><a href="#diario">O diário</a><a href="#historia">Nossa história</a><a href="#saudade">A saudade</a></nav>
     <a class="header-note" href="#mural">Mural de recados <span aria-hidden="true">↗</span></a>
   </header>
 
@@ -41,8 +41,13 @@
         <p class="eyebrow"><span class="green-dot"></span> PALAVRAS QUE ENCONTRARAM UM LUGAR</p>
         <h1 id="hero-title">Entre uma conversa<br>e outra,<br><em>você ficou.</em><span class="hero-star" aria-hidden="true">✳</span></h1>
         <p class="intro" id="site-subtitle">Rayssa, esse é um presentinho do seu garoto de programa. Fiz o site e já aceitei o contrato de manutenção vitalícia KKKKK. Vou atualizar sempre que tiver um recado pra você ou uma lembrança nossa que eu quiser guardar aqui. Com carinho, Ítalo.</p>
-        <a class="button" href="#diario">Abra o meu diário <span aria-hidden="true">↗</span></a>
-        <p class="hero-footnote"><span aria-hidden="true">♡</span> Escrito com calma. Sentido de verdade.</p>
+        <a class="button calendar-cta" href="#calendario">Abrir o calendário de recados <span aria-hidden="true">↗</span></a>
+        <details class="diary-guide"><summary>Como usar o diário</summary>
+          <ol>
+            <li><strong>Procure um pontinho vermelho</strong> abaixo do número no <a href="#calendario">calendário</a>. Toque nesse dia para ler o que escrevi pra você. No celular, o texto aparece logo abaixo das datas.</li>
+            <li><strong>Passeie pelos meses</strong> usando as setas. “Voltar para hoje” leva você de volta à data atual.</li>
+            <li><strong>Explore no seu ritmo.</strong> Abra uma lembrança em <a href="#diario">O diário</a>, leia os bilhetes no <a href="#mural">mural</a> ou veja quanto tempo já passou em <a href="#apaixonado">Tempo apaixonado</a>.</li>
+          </ol></details>
       </div>
       <div class="hero-art" aria-label="Cartão com um girassol dourado entre ramos de flores azuis, inspirado na pintura de Van Gogh" role="img">
         <span class="art-ring ring-one"></span><span class="art-ring ring-two"></span>
@@ -60,6 +65,10 @@
       </div>
     </section>
 
+    <section class="wrap section" id="calendario" aria-labelledby="calendar-title">
+ <div class="section-heading"><div><p class="eyebrow">RECADOS DO ÍTALO</p><h2 id="calendar-title">Calendário <em>de recados.</em></h2></div><p>Toque em um dia com pontinho vermelho<br> para ler o recado que deixei pra você.</p></div>
+ <div class="calendar-layout"><div class="calendar-panel"><div class="calendar-toolbar"><button type="button" id="calendar-prev" aria-label="Mês anterior">←</button><h3 id="calendar-month" aria-live="polite"></h3><button type="button" id="calendar-next" aria-label="Próximo mês">→</button></div><button type="button" id="calendar-today" class="text-button">Voltar para hoje</button><div class="calendar-week" aria-hidden="true"><span>DOM</span><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span></div><div id="calendar-days" class="calendar-days" role="group" aria-label="Dias do mês"></div><p class="calendar-legend"><i></i> Tem um recado para você</p></div><div class="calendar-reading" id="calendar-reading" aria-live="polite" aria-atomic="true"></div></div>
+ </section>
     <div class="chapter-divider wrap"><span>PEQUENOS REGISTROS. GRANDES SENTIMENTOS.</span><span aria-hidden="true">✳</span><span>UMA PÁGINA DE CADA VEZ</span></div>
 
     <section class="love-time-section wrap section" id="apaixonado" aria-labelledby="love-title">
@@ -89,10 +98,7 @@
       <div class="love-gallery-section" id="love-gallery-section" hidden><div class="love-gallery-heading"><p class="eyebrow">AS IMAGENS TAMBÉM GUARDAM SENTIMENTOS</p><h3>Um pouquinho <em>de nós.</em></h3></div><div class="love-gallery" id="love-gallery"></div></div>
     </section>
 
-    <section class="wrap section" id="calendario" aria-labelledby="calendar-title">
- <div class="section-heading"><div><p class="eyebrow">UM DIA DE CADA VEZ</p><h2 id="calendar-title">Os dias, <em>em palavras.</em></h2></div><p>Um pedacinho do meu dia.<br>Um pensamento sobre você.</p></div>
- <div class="calendar-layout"><div class="calendar-panel"><div class="calendar-toolbar"><button type="button" id="calendar-prev" aria-label="Mês anterior">←</button><h3 id="calendar-month" aria-live="polite"></h3><button type="button" id="calendar-next" aria-label="Próximo mês">→</button></div><button type="button" id="calendar-today" class="text-button">Voltar para hoje</button><div class="calendar-week" aria-hidden="true"><span>DOM</span><span>SEG</span><span>TER</span><span>QUA</span><span>QUI</span><span>SEX</span><span>SÁB</span></div><div id="calendar-days" class="calendar-days" role="group" aria-label="Dias do mês"></div><p class="calendar-legend"><i></i> Tem um recado para você</p></div><div class="calendar-reading" id="calendar-reading" aria-live="polite" aria-atomic="true"></div></div>
- </section>
+    
  <section class="diary-section wrap section" id="diario" aria-labelledby="diary-title">
       <div class="section-heading"><div><p class="eyebrow">01 / AS PÁGINAS</p><h2 id="diary-title">O que eu guardo <em>de nós.</em></h2></div><p>Tem dia que vira lembrança.<br>Tem lembrança que vira texto.</p></div>
       <div class="demo-notice" id="demo-notice" hidden><span aria-hidden="true">✎</span><p>As datas de vocês já estão guardadas. Complete os textos sugeridos e ajuste o nível de saudade no <a href="editor.html">editor do diário</a>.</p></div>
