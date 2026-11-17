@@ -1,0 +1,8 @@
+:root{--paper:#161c22;--white:#20282d;--ink:#f1e8ce;--green:#e9e4cc;--muted:#b7b9ad;--line:#404849;--rose:#dfb254;--sage:#293737;--pale:#28363b}
+body{background-color:var(--paper);background-image:repeating-linear-gradient(114deg,transparent 0 8px,#b29b6010 9px,transparent 10px 19px)}
+.postcard{background:radial-gradient(ellipse at 48% 40%,#37413c,#242f35 73%);border-color:#646444}.bouquet{object-fit:contain}
+.section-heading .eyebrow,.editor-section .eyebrow{color:#cfad66}.section-heading h2 em{color:#e0b459}
+.section-heading::first-letter{color:inherit}
+.entry,.notice,.longing-meter,.love-card,.calendar-panel,.calendar-reading,.editor-section,.our-photos-empty{border-top-color:#82724d;background-image:linear-gradient(117deg,#577ba115,transparent 48%,#ba933a0c)}
+.chapter-divider,.footer,.calendar-toolbar{border-color:#665c42}.calendar-day[aria-pressed=true]{background:#3a5669}.calendar-day[aria-current]{border-color:#cba957}
+.header nav a:after{background:#d8b251}.header .brand img{filter:sepia(.5) saturate(1.4)}.calendar-dot,.calendar-legend i{background:#ff595f}
