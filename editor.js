@@ -69,6 +69,7 @@
   function normalize(input, { draft = false } = {}) {
     if (!input || input.version !== 1 || !input.site || !input.longing || !Array.isArray(input.entries) || !Array.isArray(input.announcements) || !Array.isArray(input.milestones)) throw new Error('Este arquivo não tem o formato do diário (versão 1).');
     if ([input.entries, input.announcements, input.milestones].some((items) => items.length > 1000)) throw new Error('O arquivo contém itens demais. Importe até 1.000 itens de cada tipo.');
+    if (input.calendarNotes !== undefined && (!Array.isArray(input.calendarNotes) || input.calendarNotes.length > 1000)) throw new Error('Confira a lista de recados do calendário (até 1.000).');
     const level = Number(input.longing.level);
     if (!Number.isFinite(level) || level < 0 || level > 100) throw new Error('A saudade deve ter um valor entre 0 e 100.');
     const itemId = (item) => typeof item.id === 'string' && item.id.length < 200 ? item.id : uid();
@@ -93,11 +94,12 @@
         photos: (love.photos || []).map((item) => ({ id: itemId(item), src: photoSource(item.src), caption: string(item.caption ?? '', 'legenda da foto', 160) })),
         music: { url: musicUrl(love.music?.url, draft), title: string(love.music?.title ?? '', 'nome da música', 160) }
       },
+      calendarNotes: (input.calendarNotes || []).map(item => ({ id: itemId(item), date: date(item.date, 'recado do calendário', draft), title: string(item.title, 'título do recado', 160), content: string(item.content, 'observação do dia', 50000) })),
       announcements: input.announcements.map((item) => ({ id: itemId(item), label: string(item.label ?? '', 'etiqueta do recado', 100), title: string(item.title, 'título do recado', 160), message: string(item.message, 'recado', 3000), active: Boolean(item.active), date: date(item.date, 'recado') })),
       entries: input.entries.map((item) => ({ id: itemId(item), date: date(item.date, 'página', draft), title: string(item.title, 'título da página', 160), category: string(item.category ?? '', 'categoria', 100), mood: string(item.mood ?? '', 'sentimento', 100), excerpt: string(item.excerpt ?? '', 'resumo', 600), content: string(item.content, 'conteúdo da página'), featured: Boolean(item.featured) })),
       milestones: input.milestones.map((item) => ({ id: itemId(item), date: date(item.date, 'marco'), label: string(item.label, 'título do marco', 160), description: string(item.description ?? '', 'descrição do marco', 3000) }))
     };
-    for (const items of [result.entries, result.announcements, result.milestones, result.loveClock.photos]) {
+    for (const items of [result.calendarNotes, result.entries, result.announcements, result.milestones, result.loveClock.photos]) {
       const seen = new Set();
       items.forEach((item) => { if (seen.has(item.id)) item.id = uid(); seen.add(item.id); });
     }
@@ -186,7 +188,7 @@
     container.replaceChildren();
     if (!data[type].length) {
       const empty = document.createElement('p'); empty.className = 'empty-list';
-      empty.textContent = { announcements: 'Nenhum recadinho por aqui. Que tal escrever o primeiro?', entries: 'Uma página em branco também é um começo.', milestones: 'Cada história tem seus dias especiais. Adicione o primeiro.' }[type];
+      empty.textContent = { calendarNotes: 'Escolha uma data para guardar o primeiro recado.', announcements: 'Nenhum recadinho por aqui. Que tal escrever o primeiro?', entries: 'Uma página em branco também é um começo.', milestones: 'Cada história tem seus dias especiais. Adicione o primeiro.' }[type];
       container.append(empty); return;
     }
     data[type].forEach((item) => {
@@ -338,6 +340,7 @@
     finally { event.target.value = ''; renderPhotos(); }
   });
   $('add-announcement').addEventListener('click', () => addItem('announcements', 'announcements-list', { id: uid(), label: 'Recadinho', title: '', message: '', active: true, date: today() }));
+  $('add-calendar-note').addEventListener('click', () => addItem('calendarNotes', 'calendar-notes-list', { id: uid(), date: today(), title: '', content: '' }));
   $('add-entry').addEventListener('click', () => addItem('entries', 'entries-list', { id: uid(), date: today(), title: '', category: 'Nós', mood: 'Com carinho', excerpt: '', content: '', featured: false }));
   $('add-milestone').addEventListener('click', () => addItem('milestones', 'milestones-list', { id: uid(), date: null, label: '', description: '' }));
   $('preview-button').addEventListener('click', (event) => {
