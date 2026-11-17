@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="theme-color" content="#263d35">
+  <title>Escrever no diário · Editor</title>
+  <link rel="icon" href="assets/flor.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="editor.css">
+  <script src="data.js" defer></script>
+  <script src="editor.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#principal">Ir para o editor</a>
+  <header class="topbar">
+    <a class="brand" href="index.html"><span aria-hidden="true">✳</span> de mim, para você</a>
+    <a class="back-link" href="index.html">← Voltar ao diário</a>
+  </header>
+  <div class="editor-layout">
+    <aside class="sidebar" aria-label="Navegação do editor">
+      <p class="eyebrow">O lado de quem escreve</p>
+      <h1>Uma página<br>de cada vez.</h1>
+      <p class="sidebar-description">Guarde aqui as palavras que você quer que ela encontre.</p>
+      <nav aria-label="Seções do editor">
+        <a href="#sobre"><span>01</span> O diário</a>
+        <a href="#apaixonado"><span>02</span> Tempo apaixonado</a>
+        <a href="#saudade"><span>03</span> A saudade</a>
+        <a href="#avisos"><span>04</span> Os recadinhos</a>
+        <a href="#paginas"><span>05</span> As páginas</a>
+        <a href="#marcos"><span>06</span> A história</a>
+      </nav>
+      <p class="local-note">Seu rascunho fica neste navegador. Para ela ver as mudanças, baixe o arquivo e atualize o GitHub.</p>
+    </aside>
+    <main id="principal" tabindex="-1">
+      <div class="editor-intro">
+        <div><p class="eyebrow">Ateliê do diário</p><h2>Escrever também é cuidar.</h2></div>
+        <span class="draft-badge">Rascunho local</span>
+      </div>
+      <div class="notice">
+        <strong>Como suas palavras chegam até ela</strong>
+        <p>Edite aqui, clique em <b>Baixar data.js</b> e substitua o arquivo <code>data.js</code> no repositório do diário. Salvar neste editor não altera o site publicado.</p>
+      </div>
+      <form id="diary-form" autocomplete="off">
+        <section class="editor-section" id="sobre" aria-labelledby="sobre-title">
+          <div class="section-heading"><div><p class="eyebrow">01 · O diário</p><h2 id="sobre-title">Para quem são estas páginas?</h2></div></div>
+          <div class="fields-grid">
+            <div class="field full"><label for="site-title">Nome do diário</label><input id="site-title" name="title" maxlength="160" required></div>
+            <div class="field"><label for="site-recipient">Nome dela ou apelido</label><input id="site-recipient" name="recipient" maxlength="100" required></div>
+            <div class="field"><label for="site-author">Seu nome ou assinatura</label><input id="site-author" name="author" maxlength="100" required></div>
+            <div class="field full"><label for="site-subtitle">Pequena apresentação</label><textarea id="site-subtitle" name="subtitle" rows="3" maxlength="600"></textarea></div>
+            <div class="field"><label for="site-start">Quando vocês começaram a conversar</label><input id="site-start" name="startDate" type="date"><small>Deixe em branco enquanto não quiser informar a data.</small></div>
+          </div>
+          <label class="check-field"><input id="demo-mode" type="checkbox"><span>Identificar os textos atuais como exemplos para personalizar</span></label>
+        </section>
+        <section class="editor-section" id="apaixonado" aria-labelledby="love-title">
+          <div class="section-heading"><div><p class="eyebrow">02 · Tempo apaixonado</p><h2 id="love-title">O começo do que você sente.</h2></div><span aria-hidden="true" class="love-editor-heart">♡</span></div>
+          <p class="section-help">O contador já começa em 9 de novembro de 2026, às 14:52 de Brasília, e avança sozinho, a cada segundo. Os campos abaixo são apenas para personalizar esse começo e os detalhes de vocês.</p>
+          <div class="fields-grid">
+            <div class="field"><label for="love-start-date">Desde quando você está apaixonado</label><input id="love-start-date" type="date"><small>Você pode escolher uma data diferente da primeira conversa. Sem data, o contador fica sem início definido.</small></div>
+            <div class="field"><label for="love-start-time">Horário do começo (opcional)</label><input id="love-start-time" type="time" step="60"><small>Sem horário informado, a contagem começa às 00:00. Sempre usamos o horário de Brasília (UTC−03:00).</small></div>
+            <div class="field full"><label for="love-message">Uma mensagem para acompanhar esse tempo</label><textarea id="love-message" rows="3" maxlength="600"></textarea></div>
+          </div>
+          <div class="love-media-heading"><div><h3>Fotos que contam a história</h3><p>Até 6 fotos JPEG, PNG ou WebP, com até 6 MB cada. Elas serão reduzidas para caber no diário.</p></div><button type="button" class="button secondary small" id="add-love-photos">+ Adicionar fotos</button></div>
+          <input id="love-photo-files" type="file" accept="image/jpeg,image/png,image/webp" multiple hidden>
+          <div class="love-photo-list" id="love-photos-list"></div>
+          <div class="love-music-fields fields-grid">
+            <div class="field full"><label for="love-music-url">Música de vocês (opcional)</label><input id="love-music-url" type="text" maxlength="2000" placeholder="Link do Spotify, YouTube ou de um arquivo de áudio"><small>Use um link HTTPS do Spotify ou YouTube, ou o caminho de um áudio .mp3, .ogg ou .wav incluído no projeto. A música só toca quando ela clicar.</small></div>
+            <div class="field full"><label for="love-music-title">Nome da música ou um recadinho</label><input id="love-music-title" maxlength="160" placeholder="Uma música que me lembra você"></div>
+          </div>
+        </section>
+        <section class="editor-section" id="saudade" aria-labelledby="saudade-title">
+          <div class="section-heading"><div><p class="eyebrow">03 · A saudade</p><h2 id="saudade-title">Quanto de você falta aqui?</h2></div><output id="longing-value" for="longing-level">0%</output></div>
+          <div class="field"><label for="longing-level">Nível da saudade</label><input id="longing-level" type="range" min="0" max="100" step="1"><div class="range-labels"><span>0% · tranquilo</span><span>100% · transbordando</span></div></div>
+          <div class="fields-grid">
+            <div class="field full"><label for="longing-message">O que essa saudade está dizendo</label><textarea id="longing-message" rows="3" maxlength="600"></textarea></div>
+            <div class="field"><label for="longing-date">Data da atualização</label><input id="longing-date" type="date" required></div>
+          </div>
+        </section>
+        <section class="editor-section" id="avisos" aria-labelledby="avisos-title">
+          <div class="section-heading"><div><p class="eyebrow">04 · Os recadinhos</p><h2 id="avisos-title">Uma coisa importante.</h2></div><button class="button secondary small" type="button" id="add-announcement">+ Novo recado</button></div>
+          <p class="section-help">Os recados ativos aparecem no banner do diário. Desative um recado para guardá-lo sem exibir.</p>
+          <div id="announcements-list" class="items-list"></div>
+        </section>
+        <section class="editor-section" id="paginas" aria-labelledby="paginas-title">
+          <div class="section-heading"><div><p class="eyebrow">05 · As páginas</p><h2 id="paginas-title">Tudo o que dá vontade de contar.</h2></div><button class="button secondary small" type="button" id="add-entry">+ Nova página</button></div>
+          <p class="section-help">Use uma linha em branco entre os parágrafos. A categoria ajuda a encontrar as páginas no diário.</p>
+          <div id="entries-list" class="items-list"></div>
+          <datalist id="category-options"><option value="O começo"><option value="Pequenos detalhes"><option value="Saudade"><option value="Nós"></datalist>
+        </section>
+        <section class="editor-section" id="marcos" aria-labelledby="marcos-title">
+          <div class="section-heading"><div><p class="eyebrow">06 · A história</p><h2 id="marcos-title">Os dias que ficam.</h2></div><button class="button secondary small" type="button" id="add-milestone">+ Novo marco</button></div>
+          <p class="section-help">Marque o começo, uma conversa especial ou um encontro. No diário, os marcos aparecem em ordem de data, com os que ainda não têm data ao final.</p>
+          <div id="milestones-list" class="items-list"></div>
+        </section>
+      </form>
+      <section class="file-section" aria-labelledby="files-title">
+        <p class="eyebrow">Suas palavras, guardadas</p><h2 id="files-title">Continuar de onde você parou.</h2>
+        <p>Você pode importar um <code>data.js</code> ou JSON exportado por este editor. A importação substitui o rascunho deste navegador.</p>
+        <div class="file-actions"><button class="button secondary" id="import-button" type="button">Importar arquivo</button><button class="text-button" id="restore-button" type="button">Voltar à versão publicada</button></div>
+        <input id="import-file" type="file" accept=".js,.json,application/json,text/javascript" hidden>
+      </section>
+      <footer class="editor-footer"><span>Feito de palavras que merecem ficar.</span><a href="README.md">Instruções para publicar</a></footer>
+    </main>
+  </div>
+  <div class="savebar">
+    <div><span class="save-dot" aria-hidden="true"></span><span id="save-status" role="status" aria-live="polite">Carregando seu diário…</span></div>
+    <div class="save-actions"><a class="button secondary" id="preview-button" href="index.html?rascunho=1" target="_blank" rel="noopener">Ver rascunho <span aria-hidden="true">↗</span></a><button class="button primary" id="export-button" type="button">Baixar data.js <span aria-hidden="true">↓</span></button></div>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+</body>
+</html>

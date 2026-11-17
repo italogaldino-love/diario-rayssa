@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f5ed">
+  <meta name="description" content="Um diário de lembranças, saudade e palavras guardadas com carinho.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Entre linhas, você. — um diário com carinho</title>
+  <link rel="icon" href="assets/flor.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="romance.css">
+  <script src="data.js" defer></script>
+  <script src="love-time.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="romance.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div class="draft-ribbon" id="draft-ribbon" hidden>Prévia do seu rascunho neste navegador. <a href="index.html">Ver versão publicada</a></div>
+  <header class="header wrap">
+    <a class="brand" href="#inicio" aria-label="Página inicial"><img src="assets/flor.svg" width="38" height="42" alt=""><span><strong id="brand-title">Entre linhas, você.</strong><small>UM DIÁRIO, MUITO CARINHO.</small></span></a>
+    <nav aria-label="Navegação principal"><a href="#apaixonado">Tempo apaixonado</a><a href="#diario">O diário</a><a href="#historia">Nossa história</a><a href="#saudade">A saudade</a></nav>
+    <a class="header-note" href="#mural">Mural de recados <span aria-hidden="true">↗</span></a>
+  </header>
+
+  <main id="conteudo">
+    <div class="announcement wrap" id="announcement" hidden>
+      <span class="announcement-icon" aria-hidden="true">✧</span>
+      <div class="announcement-copy"><span class="eyebrow" id="announcement-label"></span><p id="announcement-title"></p></div>
+      <button type="button" class="text-button" id="read-announcement">Ler recado <span aria-hidden="true">↗</span></button>
+      <div class="announcement-controls"><button type="button" id="previous-announcement" aria-label="Recado anterior">‹</button><span id="announcement-count" aria-live="polite"></span><button type="button" id="next-announcement" aria-label="Próximo recado">›</button></div>
+      <button type="button" class="dismiss" id="dismiss-announcement" aria-label="Fechar banner de recados">×</button>
+    </div>
+
+    <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="green-dot"></span> PALAVRAS QUE ENCONTRARAM UM LUGAR</p>
+        <h1 id="hero-title">Entre uma conversa<br>e outra,<br><em>você ficou.</em><span class="hero-star" aria-hidden="true">✳</span></h1>
+        <p class="intro" id="site-subtitle">Um lugar para guardar o que sinto, as pequenas lembranças e tudo o que eu ainda quero te contar.</p>
+        <a class="button" href="#diario">Abra o meu diário <span aria-hidden="true">↗</span></a>
+        <p class="hero-footnote"><span aria-hidden="true">♡</span> Escrito com calma. Sentido de verdade.</p>
+      </div>
+      <div class="hero-art" aria-label="Ilustração de um cartão com flores, feito para você" role="img">
+        <span class="art-ring ring-one"></span><span class="art-ring ring-two"></span>
+        <span class="art-caption">algumas coisas merecem<br>ficar guardadas.</span>
+        <div class="back-paper"></div>
+        <div class="postcard">
+          <span class="tape"></span>
+          <div class="postcard-top"><span>PARA <span id="card-recipient">VOCÊ</span></span><span aria-hidden="true">♡</span></div>
+          <img src="assets/bouquet.svg" alt="" class="bouquet" width="300" height="300">
+          <p>Tem um pouco de você<br>em tudo o que eu escrevo.</p>
+          <div class="postcard-bottom"><span>feito de lembranças & afeto</span><span aria-hidden="true">✳</span></div>
+        </div>
+        <div class="round-stamp" aria-hidden="true"><span>ENTRE NÓS</span><b>♡</b><span>SEM PONTO FINAL</span></div>
+        <span class="art-spark spark-one" aria-hidden="true">✧</span><span class="art-spark spark-two" aria-hidden="true">✧</span>
+      </div>
+    </section>
+
+    <div class="chapter-divider wrap"><span>PEQUENOS REGISTROS. GRANDES SENTIMENTOS.</span><span aria-hidden="true">✳</span><span>UMA PÁGINA DE CADA VEZ</span></div>
+
+    <section class="love-time-section wrap section" id="apaixonado" aria-labelledby="love-title">
+      <div class="section-heading"><div><p class="eyebrow">DESDE QUE VOCÊ GANHOU ESSE LUGAR EM MIM</p><h2 id="love-title">Tempo <em>apaixonado.</em></h2></div><p>O tempo passa.<br>E eu continuo escolhendo escrever sobre você.</p></div>
+      <div class="love-card">
+        <div class="love-card-top"><span class="love-card-label"><span class="love-heart" aria-hidden="true">♡</span> POR <span id="love-recipient">RAYSSA VIEIRA</span></span><span class="love-live"><span></span> E CONTANDO…</span></div>
+        <p class="love-dedication" id="love-dedication">Desde aquele dia, cada segundo tem um pouco de você.</p>
+        <div class="love-counter" role="group" aria-label="Tempo apaixonado desde 9 de novembro de 2026, às 14h52 de Brasília" id="love-counter">
+          <div class="love-unit"><span id="love-years">00</span><small id="love-years-label">anos</small></div>
+          <span class="love-colon" aria-hidden="true">:</span>
+          <div class="love-unit"><span id="love-months">00</span><small id="love-months-label">meses</small></div>
+          <span class="love-colon" aria-hidden="true">:</span>
+          <div class="love-unit"><span id="love-days">00</span><small id="love-days-label">dias</small></div>
+          <span class="love-colon love-colon-middle" aria-hidden="true">:</span>
+          <div class="love-unit"><span id="love-hours">00</span><small id="love-hours-label">horas</small></div>
+          <span class="love-colon" aria-hidden="true">:</span>
+          <div class="love-unit"><span id="love-minutes">00</span><small id="love-minutes-label">minutos</small></div>
+          <span class="love-colon" aria-hidden="true">:</span>
+          <div class="love-unit love-unit-seconds"><span id="love-seconds">00</span><small id="love-seconds-label">segundos</small></div>
+        </div>
+        <div class="love-origin"><span class="love-origin-line"></span><p id="love-origin">Desde <time datetime="2026-11-09T14:52:00-03:00">9 de novembro de 2026, às 14h52</time><small>HORÁRIO DE BRASÍLIA</small></p><span class="love-origin-line"></span></div>
+        <div class="love-totals"><div><span id="love-total-hours">0</span><small>horas com você nos pensamentos</small></div><div><span id="love-total-minutes">0</span><small>minutos de uma história só nossa</small></div><div><span id="love-total-seconds">0</span><small>segundos desde o nosso começo</small></div></div>
+        <div class="love-card-bottom"><p id="love-next-month">Uma história que ganha um segundo novo a cada instante.</p><span aria-hidden="true">✧</span></div>
+      </div>
+      <div class="love-bottom-note"><p>O contador continua, mesmo quando você fecha esta página.</p><span>e eu continuo por aqui. <span aria-hidden="true">♡</span></span></div>
+      <div class="love-music" id="love-music" hidden></div>
+      <div class="love-gallery-section" id="love-gallery-section" hidden><div class="love-gallery-heading"><p class="eyebrow">AS IMAGENS TAMBÉM GUARDAM SENTIMENTOS</p><h3>Um pouquinho <em>de nós.</em></h3></div><div class="love-gallery" id="love-gallery"></div></div>
+    </section>
+
+    <section class="diary-section wrap section" id="diario" aria-labelledby="diary-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / AS PÁGINAS</p><h2 id="diary-title">O que eu guardo <em>de nós.</em></h2></div><p>Tem dia que vira lembrança.<br>Tem lembrança que vira texto.</p></div>
+      <div class="demo-notice" id="demo-notice" hidden><span aria-hidden="true">✎</span><p>As datas de vocês já estão guardadas. Complete os textos sugeridos e ajuste o nível de saudade no <a href="editor.html">editor do diário</a>.</p></div>
+      <div class="diary-tools"><div class="filters" role="group" aria-label="Filtrar páginas por assunto" id="filters"></div><label class="search"><svg viewBox="0 0 24 24" width="17" height="17" aria-hidden="true"><circle cx="10" cy="10" r="6.5"></circle><path d="m15 15 5 5"></path></svg><input type="search" id="search" placeholder="Procurar uma lembrança…" aria-label="Procurar nas páginas do diário"></label></div>
+      <p class="sr-only" id="results-count" role="status"></p>
+      <div id="entries" class="entries"></div>
+      <div id="empty-state" class="empty-state" hidden><span aria-hidden="true">✎</span><h3>Nenhuma página por aqui ainda.</h3><p id="empty-message">Tente outra palavra ou outro assunto.</p><button type="button" class="text-button" id="clear-search">Ver todas as páginas ↗</button></div>
+    </section>
+
+    <section class="longing-section" id="saudade" aria-labelledby="longing-title"><div class="wrap longing-grid">
+      <div class="longing-copy"><p class="eyebrow">02 / O QUE NÃO CABE EM PALAVRAS</p><h2 id="longing-title">Se desse para medir<br>a minha <em>saudade…</em></h2><p>Esse seria o jeito mais perto de te mostrar.<br>Mesmo sabendo que tem coisa que passa da escala.</p><span class="hand-note">e olha que eu tentei medir. <span aria-hidden="true">↗</span></span></div>
+      <div class="longing-meter"><div class="meter-top"><span><span class="pulse-dot"></span> TERMÔMETRO DA SAUDADE</span><span aria-hidden="true">♡</span></div><div class="meter-reading"><span id="longing-value">88</span><small>%</small><span class="reading-label" id="longing-label">Quase transbordando</span></div><div class="meter-track" id="longing-progress" role="progressbar" aria-label="Nível de saudade" aria-valuemin="0" aria-valuemax="100" aria-valuenow="88"><div class="meter-fill" id="longing-fill"></div><span class="meter-tick tick-one"></span><span class="meter-tick tick-two"></span><span class="meter-tick tick-three"></span></div><div class="meter-scale"><span>um pouquinho</span><span>não cabe no peito</span></div><p id="longing-message"></p><span class="meter-update" id="longing-updated"></span></div>
+    </div></section>
+
+    <section class="history-section wrap section" id="historia" aria-labelledby="history-title"><div class="section-heading"><div><p class="eyebrow">03 / DESDE A PRIMEIRA CONVERSA</p><h2 id="history-title">Todo começo tem <em>um detalhe.</em></h2></div><p id="days-together">Uma história feita de pequenos momentos.</p></div><div class="timeline" id="timeline"></div><div class="history-bottom"><span aria-hidden="true">〰</span><p>E que venham as próximas páginas.</p><span aria-hidden="true">♡</span></div></section>
+
+    <section class="notice-section wrap section" id="mural" aria-labelledby="notice-title"><div class="section-heading"><div><p class="eyebrow">04 / NO NOSSO MURAL</p><h2 id="notice-title">Antes que eu <em>me esqueça.</em></h2></div><span class="mural-caption">recadinhos para você <span aria-hidden="true">↙</span></span></div><div class="notice-grid" id="notices"></div></section>
+
+    <section class="closing wrap"><span class="closing-flower" aria-hidden="true">✳</span><p>Algumas histórias a gente vive.<br>Outras, a gente também <em>escreve.</em></p><small id="signature">De mim, com carinho</small></section>
+  </main>
+  <footer class="footer wrap"><a href="#inicio" class="footer-brand" id="footer-brand">Entre linhas, você.</a><span>Um cantinho feito de afeto.</span><a href="#inicio">Voltar ao começo ↑</a></footer>
+  <dialog id="reading-dialog" class="reading-dialog" aria-labelledby="dialog-title"><div class="dialog-top"><span class="eyebrow" id="dialog-label"></span><button type="button" class="dialog-close" aria-label="Fechar leitura" id="close-dialog">×</button></div><div class="dialog-paper"><p class="dialog-date" id="dialog-date"></p><h2 id="dialog-title"></h2><p class="dialog-mood" id="dialog-mood"></p><div class="dialog-body" id="dialog-body"></div><p class="dialog-signature" id="dialog-signature"></p><div class="dialog-navigation" id="dialog-navigation"><button type="button" class="text-button" id="previous-entry">← Página anterior</button><button type="button" class="text-button" id="next-entry">Próxima página →</button></div></div></dialog>
+  <dialog class="love-photo-dialog" id="love-photo-dialog" aria-labelledby="love-photo-caption"><button type="button" class="love-photo-close" id="love-photo-close" aria-label="Fechar foto">×</button><img id="love-photo-full" alt=""><p id="love-photo-caption"></p></dialog>
+  <noscript><p class="noscript-note">Ative o JavaScript para ler as páginas do diário.</p></noscript>
+</body>
+</html>
