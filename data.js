@@ -1,6 +1,6 @@
 window.DIARY_DATA = {
   "version": 1,
-  "demo": true,
+  "demo": false,
   "site": {
     "title": "Entre linhas, Rayssa.",
     "recipient": "Rayssa Vieira",
@@ -18,7 +18,7 @@ window.DIARY_DATA = {
       "id": "primeiro-recado",
       "label": "Um recado importante",
       "title": "Rayssa, este cantinho é para você.",
-      "message": "Quis criar um lugar para escrever sobre você. Sobre o que a gente vive, o que eu guardo e o que ainda quero te contar. Um diário meu, mas com muito de você em cada página.\n\nEste bilhete é uma sugestão de texto: revise com suas próprias palavras no editor antes de compartilhar.",
+      "message": "Quis criar um lugar para escrever sobre você. Sobre o que a gente vive, o que eu guardo e o que ainda quero te contar. Um diário meu, mas com muito de você em cada página.",
       "active": true,
       "date": null
     },
@@ -26,7 +26,7 @@ window.DIARY_DATA = {
       "id": "novas-paginas",
       "label": "No nosso mural",
       "title": "Ainda temos muitas páginas pela frente.",
-      "message": "Este espaço pode guardar um convite, uma novidade ou só um lembrete bom para o dia.\n\nTexto de exemplo: personalize ou desative este recado no editor.",
+      "message": "Este espaço pode guardar um convite, uma novidade ou só um lembrete bom para o dia.",
       "active": true,
       "date": null
     }
@@ -39,7 +39,7 @@ window.DIARY_DATA = {
       "category": "O começo",
       "mood": "Uma lembrança boa",
       "excerpt": "1º de agosto. A loja em que você trabalhava. Foi ali que nossos caminhos se cruzaram pela primeira vez.",
-      "content": "Rayssa, nos conhecemos no dia 1º de agosto, quando fui comprar meu iPhone 17 Pro na loja em que você trabalhava.\n\nNaquele momento, ainda não era o começo do que surgiu entre a gente. Era o primeiro encontro dos nossos caminhos, uma lembrança que agora tem seu lugar aqui.\n\n[Conte aqui o que você lembra daquele dia: como foi a conversa, o que chamou sua atenção e o que ficou guardado.]",
+      "content": "Rayssa, nos conhecemos no dia 1º de agosto, quando fui comprar meu iPhone 17 Pro na loja em que você trabalhava.\n\nNaquele momento, ainda não era o começo do que surgiu entre a gente. Era o primeiro encontro dos nossos caminhos, uma lembrança que agora tem seu lugar aqui.",
       "featured": true
     },
     {
@@ -49,7 +49,7 @@ window.DIARY_DATA = {
       "category": "O começo",
       "mood": "Um novo capítulo",
       "excerpt": "9 de novembro. O dia em que começamos a conversar com algo a mais: interesse um no outro.",
-      "content": "O dia 9 de novembro marca outro começo. Foi quando começamos a conversar e surgiu algo que envolvia interesse entre a gente.\n\nSe o primeiro de agosto foi o dia em que nos conhecemos, o nove de novembro é o início deste capítulo que eu quero registrar.\n\n[Escreva aqui como a conversa começou, o que vocês disseram e como você se sentiu. Essa parte da história é sua para contar.]",
+      "content": "O dia 9 de novembro marca outro começo. Foi quando começamos a conversar e surgiu algo que envolvia interesse entre a gente.\n\nSe o primeiro de agosto foi o dia em que nos conhecemos, o nove de novembro é o início deste capítulo que eu quero registrar.",
       "featured": false
     },
     {
@@ -59,7 +59,7 @@ window.DIARY_DATA = {
       "category": "Saudade",
       "mood": "Com carinho",
       "excerpt": "Algumas coisas merecem mais espaço do que uma mensagem. Foi por isso que este diário nasceu.",
-      "content": "Quero ter um lugar para falar sobre você, desde quando começamos a conversar. Para escrever sobre tudo: as lembranças, os dias comuns e a saudade.\n\nEste diário nasceu dessa vontade. Uma página de cada vez, do meu jeito.\n\n[Esta é uma sugestão de abertura. Troque pelas suas palavras e conte o que está sentindo hoje.]",
+      "content": "Quero ter um lugar para falar sobre você, desde quando começamos a conversar. Para escrever sobre tudo: as lembranças, os dias comuns e a saudade.\n\nEste diário nasceu dessa vontade. Uma página de cada vez, do meu jeito.",
       "featured": false
     }
   ],
