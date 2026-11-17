@@ -17,6 +17,8 @@
       }
     } catch (_) { /* Published content remains usable when browser storage is unavailable. */ }
   }
+  for (const notice of data.announcements || []) notice.message = window.cleanDiaryText(notice.message);
+  for (const entry of data.entries || []) entry.content = window.cleanDiaryText(entry.content);
   const site = data.site;
   const entries = [...(data.entries || [])].sort((a, b) => String(b.date || '').localeCompare(String(a.date || '')));
   const notices = (data.announcements || []).filter((notice) => notice.active);
@@ -48,7 +50,7 @@
   text('site-subtitle', site.subtitle);
   text('card-recipient', (site.recipient || 'você').toLocaleUpperCase('pt-BR'));
   text('signature', site.author || 'De mim, com carinho');
-  $('demo-notice').hidden = !data.demo;
+
 
   function showDialog(label, heading, content, date, mood, isEntry) {
     text('dialog-label', label);
@@ -171,7 +173,7 @@
   $('longing-value').textContent = String(level);
   text('longing-label', level >= 90 ? 'Não cabe no peito' : level >= 70 ? 'Quase transbordando' : level >= 40 ? 'Vontade de estar perto' : level > 0 ? 'Você nos pensamentos' : 'Aconchego de estar perto');
   text('longing-message', data.longing?.message);
-  text('longing-updated', data.longing?.updatedAt ? 'REGISTRADO EM ' + formatDate(data.longing.updatedAt).toLocaleUpperCase('pt-BR') + (data.demo ? ' · NÍVEL DE EXEMPLO' : '') : '');
+  text('longing-updated', data.longing?.updatedAt ? 'REGISTRADO EM ' + formatDate(data.longing.updatedAt).toLocaleUpperCase('pt-BR') : '');
   $('longing-fill').style.width = level + '%';
   $('longing-progress').setAttribute('aria-valuenow', String(level));
   $('longing-progress').setAttribute('aria-valuetext', level + '% de saudade');

@@ -78,7 +78,7 @@
     if ((love.photos || []).length > 6) throw new Error('Escolha até 6 fotos para o Tempo apaixonado.');
     const result = {
       version: 1,
-      demo: Boolean(input.demo),
+      demo: false,
       site: {
         title: string(input.site.title, 'nome do diário', 160),
         recipient: string(input.site.recipient, 'nome dela', 100),
@@ -103,6 +103,8 @@
       const seen = new Set();
       items.forEach((item) => { if (seen.has(item.id)) item.id = uid(); seen.add(item.id); });
     }
+    for (const notice of result.announcements) notice.message = window.cleanDiaryText(notice.message);
+    for (const entry of result.entries) entry.content = window.cleanDiaryText(entry.content);
     return result;
   }
 
@@ -132,7 +134,6 @@
     data.site.author = $('site-author').value;
     data.site.subtitle = $('site-subtitle').value;
     data.site.startDate = $('site-start').value || null;
-    data.demo = $('demo-mode').checked;
     data.longing.level = Number($('longing-level').value);
     data.longing.message = $('longing-message').value;
     data.longing.updatedAt = $('longing-date').value;
@@ -223,7 +224,6 @@
     $('site-author').value = data.site.author;
     $('site-subtitle').value = data.site.subtitle;
     $('site-start').value = data.site.startDate || '';
-    $('demo-mode').checked = data.demo;
     $('longing-level').value = data.longing.level;
     $('longing-message').value = data.longing.message;
     $('longing-date').value = data.longing.updatedAt;
@@ -323,7 +323,7 @@
 
   renderAll();
   $('diary-form').addEventListener('submit', (event) => event.preventDefault());
-  ['site-title', 'site-recipient', 'site-author', 'site-subtitle', 'site-start', 'demo-mode', 'longing-level', 'longing-message', 'longing-date', 'love-start-date', 'love-start-time', 'love-message', 'love-music-url', 'love-music-title'].forEach((id) => $(id).addEventListener('input', () => { collectSettings(); scheduleSave(); }));
+  ['site-title', 'site-recipient', 'site-author', 'site-subtitle', 'site-start', 'longing-level', 'longing-message', 'longing-date', 'love-start-date', 'love-start-time', 'love-message', 'love-music-url', 'love-music-title'].forEach((id) => $(id).addEventListener('input', () => { collectSettings(); scheduleSave(); }));
   $('add-love-photos').addEventListener('click', () => $('love-photo-files').click());
   $('love-photo-files').addEventListener('change', async (event) => {
     const files = Array.from(event.target.files || []); if (!files.length) return;
