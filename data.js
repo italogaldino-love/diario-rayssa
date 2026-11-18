@@ -9,9 +9,9 @@ window.DIARY_DATA = {
     "startDate": "2026-11-09"
   },
   "longing": {
-    "level": 88,
+    "level": 90,
     "message": "Daquelas que fazem a gente abrir a conversa só para reler mais uma vez.",
-    "updatedAt": "2026-11-17"
+    "updatedAt": "2026-11-18"
   },
   "announcements": [
     {
