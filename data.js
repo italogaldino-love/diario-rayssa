@@ -117,6 +117,36 @@ window.DIARY_DATA = {
       "date": "2026-11-12",
       "title": "Foi simplesmente perfeito",
       "content": "Hoje eu acordei com você no pensamento. Parece coisa de adolescente falar assim, mas no puedo negar os fatos KKKKK.\n\nO dia correu muito bem, mas o melhor ficou pro nosso encontro. Depois de tanta expectativa, de contar os dias e de quase morrer de ansiedade, finalmente aconteceu.\n\nE foi simplesmente PERFEITO."
+    },
+    {
+      "id": "recado-2026-11-13",
+      "date": "2026-11-13",
+      "title": "Seu cheiro ficou",
+      "content": "Nossa, hoje eu acordei com seu cheiro na cabeça, na roupa, em TUDO. Não paro de pensar em você e ainda não sei muito bem como lidar com isso.\n\nParece que as coisas estão se encaminhando pra gente começar a escrever uma história boa. Tô muito feliz por ter te mandado aquela mensagem."
+    },
+    {
+      "id": "recado-2026-11-14",
+      "date": "2026-11-14",
+      "title": "Presentinho e primeiro bolo",
+      "content": "Por incrível que pareça, hoje a gente vai sair de novo, e eu tô com uma ansiedade braba. Tô saindo pra resolver umas coisas e comprar um presentinho pra você. E sim, minha linguagem de amor é dar presentes KKKKK.\n\nAtualização do dia: não saímos. Acho que já posso considerar esse o primeiro bolo que você me deu KKKKKKKKKKKK."
+    },
+    {
+      "id": "recado-2026-11-15",
+      "date": "2026-11-15",
+      "title": "Espero que a gente fique bem",
+      "content": "Hoje foi um dia bem sombrio. Fiquei com a sensação de que tudo tinha se perdido, mas continuei pensando em você, assim como em todos os outros dias.\n\nEspero que a gente fique bem."
+    },
+    {
+      "id": "recado-2026-11-16",
+      "date": "2026-11-16",
+      "title": "O final do dia valeu a pena",
+      "content": "Mais um dia em que eu não soube muito bem o que fazer. Fiquei tentando entender se errei em alguma coisa e o que estava acontecendo entre a gente. Quem sabe um dia você leia isso e me ajude a entender também KKKKK.\n\nMas o final do dia valeu a pena. Aquele passeiozinho no Lago à noite fez bem."
+    },
+    {
+      "id": "recado-2026-11-17",
+      "date": "2026-11-17",
+      "title": "Faltou você pra eu contar",
+      "content": "Primeiro dia sem conversar com você. Que loucura a forma como a vida surpreende a gente.\n\nHoje foi um dia muito bom no trabalho, mas senti falta de poder te contar as coisas boas que aconteceram.\n\nNão sei se vamos voltar a nos falar. Mesmo assim, queria deixar registrado aqui o quanto eu sinto a sua falta."
     }
   ]
 };
